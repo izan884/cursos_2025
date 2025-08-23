@@ -37,3 +37,9 @@ git tag -a v1.0 -m "mi primera version"
 git show v1.0
 # eliminar tag
 git tag -d v1.0
+
+
+
+
+
+dato
