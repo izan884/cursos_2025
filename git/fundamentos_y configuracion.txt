@@ -1,0 +1,39 @@
+# Configurar master a main
+
+git config --global init.defaultBranch main
+ 
+git branch -m main
+#configuracion usuario
+git config --global user.name "Andres Forero"
+git config --global user.email "izan88@hotmail.com"
+
+git config --list
+#-------------------  
+# "directorio de trabajo" ver los archivos que contienen cambios
+git status 
+# Adicionar todos los archivos a area de "stating"
+git add .
+# regresar de stating a "directorio de trabajo"
+git rm --cached curso_python
+# enviar archivoa a commit 
+git commit -m "carga inicial de manuales"
+# ver historial de log
+ git log
+# ver las ramas y la rama actual 
+git branch
+# crear rama
+git checkout -b amin
+#fucionar una rama a main
+ git merge amin
+# Borrar rama
+git branch -D amin
+#git revert: Crea un nuevo commit que deshace los cambios de un commit específico. Es útil para deshacer cambios de forma segura en repositorios compartidos.
+git revert 88cddff492ab0766fc2e5700b2d602d89ee654d1 
+#NOTAS HOJO it reset: Este comando devuelve a un commit anterior, eliminando los cambios en el historial como si nunca hubieran ocurrido.
+git reset --hard ds5ds5dd5s45d4s54s5d4s54ds4d5s4dss
+# crear un tag para un punto importante de la rama
+git tag -a v1.0 -m "mi primera version"
+# ver esa etiqueta tag
+git show v1.0
+# eliminar tag
+git tag -d v1.0
