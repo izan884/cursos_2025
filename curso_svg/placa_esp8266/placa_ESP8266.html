@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.principal {
+  position: fixed;
+  width: 300px;
+  height: 500px;
+  left: 30px;
+  top: 100px;
+  
+  border: 3px solid #73AD21;
+}
+
+div.secundario {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  left: 30px;
+  top: 80px;
+  border: 1px solid #73AD21;
+  background-image: url('tarjeta_esp8266__a.jpg'); background-size: cover; background-position: center;
+  opacity: 0.7; 
+}
+
+div.secundario_b {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  left: 30px;
+  top: 80px;
+  border: 1px solid red;
+
+}
+
+@keyframes myAnimation {
+  0% {
+    /* Estilos al inicio de la animación */
+    transform: translateX(0);
+  }
+  50% {
+    /* Estilos en la mitad de la animación */
+    transform: translateX(100px);
+  }
+  100% {
+    /* Estilos al final de la animación */
+    transform: translateX(0);
+  }
+}
+
+/* Aplica la animación al elemento */
+.dado-svg {
+
+  animation: myAnimation 2s ease-in-out infinite; /* Nombre de la animación, duración, tipo de aceleración, repeticiones */
+}
+.dado-svg-02 {
+width: 25%;
+position: relative;
+left: 20px;
+}
+	
+  .circulo-a {
+  fill: lightslategrey; /* Initially, no fill */
+  stroke: black; /* Optional: add a border */
+  stroke-width: 2px;
+  transition: fill 0.3s ease; /* Smooth transition for the fill change */
+}
+
+  .circulo-a:hover {
+  fill: yellow; /* Change fill color on hover */
+}
+
+
+
+
+#id_div_circulo_comentario_01 {
+  position: absolute;
+  border: 1px solid red;
+  bottom: 10px;
+  right: 150px;
+}
+</style>
+</head>
+<body>
+
+<h2>Placa de desarrollo NodeMcu (ESP8266)</h2>
+
+<p>Descripcion de la placa </p>
+
+<div class="principal">
+
+  <div class="secundario"></div>
+  </div>
+</div>
+
+
+<div class="principal">
+
+  <div class="secundario_b">
+  <svg  viewBox="0 0 200 600">
+   
+     <path id="class_Placa_01" d="M12 2 
+	 L 185 2 
+	 C 192 2 195 5 197 10
+	 L 196 376
+	 C 196 383 190 384 185 385
+	 L 12 385
+	 C 2 385 2 382 1 376
+	 L 1 10 
+	 C 2 5 10 2 12 2
+	 Z" style="fill:transparent;stroke:red;stroke-width:2" />
+	 
+    <circle id="circulo-01" class="circulo-a" cx="10" cy="52" r="9" fill="lightslategrey" stroke="red" stroke-width="1" />
+	<circle id="circulo-02" class="circulo-a" cx="10" cy="72" r="9" fill="lightslategrey" stroke="red" stroke-width="1" />
+	<circle id="circulo-03" class="circulo-a" cx="10" cy="92" r="9" fill="lightslategrey" stroke="red" stroke-width="1" />
+    <circle id="circulo-04" class="circulo-a" cx="10" cy="112" r="9" fill="lightslategrey" stroke="red" stroke-width="1" />
+	<circle id="circulo-05" class="circulo-a" cx="10" cy="132" r="9" fill="lightslategrey" stroke="red" stroke-width="1" />
+	<circle id="circulo-06" class="circulo-a" cx="10" cy="152" r="9" fill="lightslategrey" stroke="red" stroke-width="1" />
+	
+	<circle  class="dado-svg"  cx="100" cy="100" r="10" fill="transparent" stroke="red" stroke-width="1" />
+</svg>
+  </div>
+</div>
+<div id="id_div_circulo_comentario_01" class="comment-div">
+  0
+</div>
+
+ <script>
+ const circle = document.getElementById('circulo-01');
+ const circle2 = document.getElementById('circulo-02');
+ const circle3 = document.getElementById('circulo-03');
+ const circle4 = document.getElementById('circulo-04');
+ const circle5 = document.getElementById('circulo-05');
+ const circle6 = document.getElementById('circulo-06');
+circle.addEventListener('mouseover', function(event) {
+  id_div_circulo_comentario_01.textContent = 'PIN: A0';
+});
+
+circle.addEventListener('mouseout', function(event) {
+  id_div_circulo_comentario_01.textContent = '';
+});
+   //===================================================================================================
+circle2.addEventListener('mouseover', function(event) {
+  id_div_circulo_comentario_01.textContent = 'PIN: A1';
+});
+
+circle2.addEventListener('mouseout', function(event) {
+  id_div_circulo_comentario_01.textContent = '';
+});
+   //===================================================================================================
+circle3.addEventListener('mouseover', function(event) {
+  id_div_circulo_comentario_01.textContent = 'PIN: A2';
+});
+
+circle3.addEventListener('mouseout', function(event) {
+  id_div_circulo_comentario_01.textContent = '';
+});
+   //===================================================================================================
+circle4.addEventListener('mouseover', function(event) {
+  id_div_circulo_comentario_01.textContent = 'PIN: A3';
+});
+
+circle4.addEventListener('mouseout', function(event) {
+  id_div_circulo_comentario_01.textContent = '';
+});
+   //===================================================================================================
+circle5.addEventListener('mouseover', function(event) {
+  id_div_circulo_comentario_01.textContent = 'PIN: A4';
+});
+
+circle5.addEventListener('mouseout', function(event) {
+  id_div_circulo_comentario_01.textContent = '';
+});
+   //===================================================================================================
+circle6.addEventListener('mouseover', function(event) {
+  id_div_circulo_comentario_01.textContent = 'PIN: A5';
+});
+
+circle6.addEventListener('mouseout', function(event) {
+  id_div_circulo_comentario_01.textContent = '';
+});
+   //===================================================================================================
+ </script>
+</body>
+</html>
